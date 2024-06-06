@@ -8,7 +8,6 @@ const app = express();
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
-const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
 
 const salt = bcrypt.genSaltSync(10);
@@ -87,7 +86,7 @@ app.post('/post', async (req,res) => {
 
 });
 
-app.put('/post/:id', uploadMiddleware.single('file'), async (req, res) => {
+app.put('/post/:id', async (req, res) => {
     const { id } = req.params;
     let newPath = null;
     if (req.file) {
