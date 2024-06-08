@@ -11,7 +11,7 @@ export default function PostPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`)
+    fetch(`https://financial-blog-ozfu.onrender.com/post/${id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error("Failed to fetch post");
@@ -27,7 +27,7 @@ export default function PostPage() {
   }, [id]);
 
   const handleDelete = () => {
-    fetch(`http://localhost:4000/post/${id}`, {
+    fetch(`https://financial-blog-ozfu.onrender.com/post/${id}`, {
       method: 'DELETE',
       credentials: 'include',
     })
@@ -66,7 +66,7 @@ export default function PostPage() {
 )}
 
       <div className="image">
-        <img src={`http://localhost:4000/${postInfo.cover}`} alt=""/>
+        <img src={postInfo.cover} alt=""/>
       </div>
       <div className="content" dangerouslySetInnerHTML={{__html:postInfo.content}} />
     </div>
