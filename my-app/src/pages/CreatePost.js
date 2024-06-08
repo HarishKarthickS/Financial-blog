@@ -32,7 +32,7 @@ export default function CreatePost() {
     cover: url}
     console.log(data)
     try {
-      const response = await axios.post('http://localhost:4000/post', data, {
+      const response = await axios.post('https://financial-blog-ozfu.onrender.com/post', data, {
         withCredentials: true,
       });
     

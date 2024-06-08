@@ -7,7 +7,7 @@ export default function Header() {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch('http://localhost:4000/profile', {
+    fetch('https://financial-blog-ozfu.onrender.com/profile', {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -17,7 +17,7 @@ export default function Header() {
   }, []);
 
   function logout() {
-    fetch('http://localhost:4000/logout', {
+    fetch('https://financial-blog-ozfu.onrender.com/logout', {
       credentials: 'include',
       method: 'POST',
     });
