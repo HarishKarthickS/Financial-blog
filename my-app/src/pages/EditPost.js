@@ -20,7 +20,7 @@ export default function EditPost() {
 
 
   useEffect(() => {
-    fetch('https://financial-blog-ozfu.onrender.com/post/'+id)
+    fetch('https://financial-blog-1.onrender.com/post/'+id)
       .then(response => {
         response.json().then(postInfo => {
           setTitle(postInfo.title);
@@ -38,7 +38,7 @@ export default function EditPost() {
       cover: url}
       console.log(data)
       try {
-        const response = await axios.put('https://financial-blog-ozfu.onrender.com/post/'+id, data, {
+        const response = await axios.put('https://financial-blog-1.onrender.com/post/'+id, data, {
           withCredentials: true,
         });
       

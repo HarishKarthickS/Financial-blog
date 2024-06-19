@@ -11,7 +11,7 @@ export default function PostPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://financial-blog-ozfu.onrender.com/post/${id}`)
+    fetch(`https://financial-blog-1.onrender.com/post/${id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error("Failed to fetch post");
@@ -27,7 +27,7 @@ export default function PostPage() {
   }, [id]);
 
   const handleDelete = () => {
-    fetch(`https://financial-blog-ozfu.onrender.com/post/${id}`, {
+    fetch(`https://financial-blog-1.onrender.com/post/${id}`, {
       method: 'DELETE',
       credentials: 'include',
     })
