@@ -132,7 +132,7 @@ app.put('/post/:id', uploadMiddleware.single('file'), async (req, res) => {
       });
     } catch (error) {
       console.error('Error editing post:', error);
-      res.status(500).json({ message: 'Internal server error' });
+      res.json({ message: 'Internal server error' });
     }
   });
   
