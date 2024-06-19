@@ -14,7 +14,12 @@ const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
-app.use(cors({credentials:true,origin:['http://localhost:3000','https://financial-blog-alpha.vercel.app/']}));
+const corsOptions = {
+  credentials: true,
+  origin: ['http://localhost:3000', 'https://financial-blog-alpha.vercel.app'],
+};
+
+app.use(cors(corsOptions));
 
 
 app.use(express.json());
